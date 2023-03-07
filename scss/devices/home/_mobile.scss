@@ -4,6 +4,10 @@ a {
     transition: .4s;
 }
 
+li {
+    display: flex;
+}
+
 p {
     line-height: 1.5
 }
@@ -16,7 +20,9 @@ details > ul,
 main,
 main > section,
 main > section > article,
-footer {
+footer,
+footer > article,
+footer aside {
     display: flex;
     flex-direction: column;
 }
@@ -120,6 +126,121 @@ footer {
         background-size: cover;
         min-height: 40vh;
     }
+    
+    // footer
+    footer {
+        background-color: $footerColor;
+    }
+    
+    footer aside {
+        width: 90%;
+        row-gap: 4vh;
+    }
+
+    footer a {
+        color: white;
+    }
+
+    footer address,
+    footer i,
+    footer p {
+        color: white;
+    }
+
+    footer h3 {
+        color: $mainColor;
+        font-size: 22px;
+    }
+
+    footer > article {
+        min-height: 150vh;
+        justify-content: center;
+        align-items: center;
+        row-gap: 5vh;
+    }
+
+    footer > article ul {
+        display: flex;
+        flex-direction: column;
+        row-gap: 3vh;
+    }
+
+    footer > article ol {
+        display: flex;
+        width: 50%;
+    }
+
+    ol  [href="#"] {
+        border: 1px solid white;
+        border-radius: 50%;
+        height: 6vh;
+        width: 6vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    footer > article li {
+        width: 100%;
+        column-gap: 2vh;
+        align-items: center;
+    }
+
+    footer form {
+        display: flex;
+        width: 100%;
+    }
+
+    footer input {
+        border: none;
+        padding: 3vh;
+        width: 70%;
+    }
+
+    footer [type="submit"]{
+        width: 30%;
+        background-color: $mainColor;
+        color: white;
+        transition: .4s;
+        border: none;
+        border: 1px solid $mainColor;
+    }
+
+
+
+
+
+    footer > section {
+        border-top: 1px solid dimgray;
+        min-height: 20vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        row-gap: 2vh;
+    }
+    
+    footer > section p {
+        width: 90%;
+        color: white;
+    }
+
+    footer span {
+        color: $mainColor;
+    }
+
+    footer > section ul {
+        display: flex;
+        width: 80%;
+    }
+
+    footer > section li {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
 
 
 
