@@ -1,0 +1,126 @@
+
+a {
+    text-decoration: none;
+    transition: .4s;
+}
+
+p {
+    line-height: 1.5
+}
+
+body,
+nav,
+nav aside,
+header,
+details > ul,
+main,
+main > section,
+main > section > article,
+footer {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+@media (min-width: $mobileVersion) {
+    // nav
+    // nav {
+    //     position: relative;
+    // }
+
+    nav > section > ul,
+    nav > section > a {
+        display: none;
+    }
+
+    nav > article {
+        background-color: $footerColor;
+    }
+
+    nav aside {
+        min-height: 14vh;
+        align-items: center;
+        justify-content: center;
+        row-gap: 2vh;
+    }
+
+    nav > article span {
+        display: flex;
+        align-items: center;
+        column-gap: 2vh;
+        color: white;
+    }
+
+    nav > article i,
+    nav > article a {
+        color: white;
+        font-size: 14px;
+    }
+
+    nav > article ul {
+        display: flex;
+        width: 50%;
+    }
+
+    nav > article li {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+
+    nav > section {
+        min-height: 8vh;
+        background-color: white;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        // column-gap: 32vh;
+    }
+
+    nav > section h2 {
+        width: 80%;
+        display: flex;
+        column-gap: 2vh;
+        color: $mainColor;
+    }
+    
+    details {
+        width: 10%;
+    }
+
+    nav summary {
+        color: gray;
+        border: 1px solid gainsboro;
+        padding: 1vh 2vh;
+        font-size: 17px;
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+        // height: 5vh;
+        // width: 5vh;
+    }
+
+
+    details ul {
+        // position: absolute;
+        width: 50vh;
+    }
+
+    details ul {
+
+    }
+
+    // header
+    header {
+        background-image: url(/img/bg-header.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 40vh;
+    }
+
+
+
+}
