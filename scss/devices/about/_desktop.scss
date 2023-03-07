@@ -159,8 +159,15 @@
         width: 2vw;
         height: 2vw;
         @include flexRow;
-        justify-content: center;
         align-items: center;
+        justify-content: center;
+    }
+
+    footer ol a {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        text-align: center;
     }
 
     footer i,
@@ -169,8 +176,17 @@
         color: white;
     }
 
-    footer a:hover {
+    footer ol a:hover {
+        color: #1f1f2e;
+        background-color: white;
+    }
+
+    footer aside:first-child > ul a:hover {
         color: $mainColor;
+    }
+
+    footer aside:nth-child(2) > ul a:hover {
+        text-decoration: underline;
     }
 
     footer form {
