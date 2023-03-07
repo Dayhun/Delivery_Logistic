@@ -42,20 +42,22 @@
         justify-content: space-between;
         align-items: center;
         padding: 0 3%;
+        height: 7vh;
     }
 
     nav > section > h2 {
-        padding: 1% 0;
         @include flexRow;
         column-gap: 1vw;
         color: $mainColor;
         font-weight: 800;
+        font-size: 30px;
     }
 
     nav > section > ul {
         @include flexRow;
         list-style-type: none;
         width: 20%;
+        height: 100%;
     }
 
     nav > section li {
@@ -81,8 +83,14 @@
         background-color: $mainColor;
         color: white;
         text-decoration: none;
-        width: 10%;
+        width: 8%;
         text-align: center;
-        padding: 1%;
+        padding: 5px;
+        border: 2px solid $mainColor;
+    }
+
+    nav > section > a:hover {
+        background-color: transparent;
+        color: $mainColor;
     }
 }
