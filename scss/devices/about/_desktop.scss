@@ -93,4 +93,124 @@
         background-color: transparent;
         color: $mainColor;
     }
+
+    // MAIN
+    main img {
+        width: 10%;
+    }
+
+    // FOOTER
+    footer {
+        background-color: #1f1f2e;
+    }
+
+    footer > article {
+        padding: 4% 3%;
+        @include flexRow;
+        justify-content: space-between;
+    }
+
+    footer > article > aside:first-child,
+    footer > article > aside:nth-child(2) {
+        width: 20%;
+        @include flexColumn;
+        row-gap: 2vh;
+    }
+
+    footer > article > aside:last-child {
+        width: 50%;
+        @include flexColumn;
+        row-gap: 2vh;
+    }
+
+    footer h3,
+    footer span {
+        color: $mainColor;
+    }
+
+    footer h3 {
+        font-size: 23px;
+    }
+
+    footer ul {
+        list-style-type: none;
+        @include flexColumn;
+        row-gap: 1vh;
+    }
+
+    footer li {
+        @include flexRow;
+        column-gap: 1vw;
+    }
+
+    footer a {
+        text-decoration: none;
+        color: white;
+    }
+
+    footer ol {
+        @include flexRow;
+        column-gap: 10px;
+    }
+
+    footer ol > li {
+        border: 1px solid white;
+        border-radius: 50%;
+        width: 2vw;
+        height: 2vw;
+        @include flexRow;
+        justify-content: center;
+        align-items: center;
+    }
+
+    footer i,
+    footer address,
+    footer p {
+        color: white;
+    }
+
+    footer a:hover {
+        color: $mainColor;
+    }
+
+    footer form {
+        @include flexRow;
+        width: 100%;
+    }
+
+    footer [type="email"] {
+        width: 75%;
+        padding: 3%;
+        border: 1px solid transparent;
+        font-size: 20px;
+        color: $mainColor;
+    }
+
+    footer [type="submit"] {
+        width: 25%;
+        padding: 3%;
+        border: 1px solid transparent;
+        background-color: $mainColor;
+        color: white;
+        font-size: 20px;
+    }
+
+    footer [type="submit"]:hover {
+        background-color: transparent;
+        border: 1px solid $mainColor;
+        color: $mainColor;
+        cursor: pointer;
+    }
+
+    footer > section {
+        @include flexRow;
+        justify-content: space-between;
+        padding: 2% 3%;
+        border-top: 1px solid gray;
+    }
+
+    footer > section > ul {
+        @include flexRow;
+        column-gap: 2vw;
+    }
 }
