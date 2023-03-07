@@ -181,7 +181,8 @@
         background-color: white;
     }
 
-    footer aside:first-child > ul a:hover {
+    footer aside:first-child > ul a:hover,
+    footer section a:hover {
         color: $mainColor;
     }
 
