@@ -94,6 +94,11 @@
         color: $mainColor;
     }
 
+    nav > section > ul > li:nth-child(2) > a {
+        background-color: $mainColor;
+        color: white;
+    }
+
     // MAIN
     main img {
         width: 10%;
