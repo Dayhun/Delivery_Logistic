@@ -1,9 +1,11 @@
-@mixin flexColumn {
+@mixin displayColumn($gap: 0vw) {
     display: flex;
     flex-direction: column;
+    row-gap: $gap;
 }
 
-@mixin flexRow {
+@mixin displayRow($gap: 0vh) {
     display: flex;
     flex-direction: row;
+    column-gap: $gap;
 }
