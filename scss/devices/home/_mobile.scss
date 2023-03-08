@@ -86,7 +86,6 @@
             text-align: left;
             color: $footerColor;
             font-weight: 600;
-
         }
 
     }
@@ -109,7 +108,51 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        min-height: 40vh;
+        height: 60vh;
+
+        > article {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(40,40,40,.9);
+            @include displayColumn(5vh);
+            justify-content: center;
+            align-items: center;
+        }
+
+        aside {
+            @include displayColumn(2vh);
+            text-align: center;
+            align-items: center;
+        }
+
+        h3 {
+            color: $mainColor;
+            font-size: 24px;
+        }
+
+        h1 {
+            color: white;
+            font-size: 34px;
+            width: 50%;
+        }
+
+        form {
+            width: 90%;
+            @include displayRow;
+        }
+
+        input {
+            width: 55%;
+            padding: 3vh 2vh;
+            border: 1px solid transparent;
+        }
+
+        [type="submit"]{
+            width: 45%;
+            background-color: $mainColor;
+            color: white;
+            font-weight: 600;
+        }
     }
     
     // footer
