@@ -1,102 +1,97 @@
-
-a {
-    text-decoration: none;
-    transition: .4s;
-}
-
-li {
-    display: flex;
-}
-
-p {
-    line-height: 1.5
-}
-
-body,
-nav,
-nav aside,
-header,
-details > ul,
-main,
-main > section,
-main > section > article,
-footer,
-footer > article,
-footer aside {
-    display: flex;
-    flex-direction: column;
-}
-
-
-
 @media (min-width: $mobileVersion) {
     // nav
-    // nav {
-    //     position: relative;
-    // }
+    nav {
+        position: relative;
+       
+        > article {
+            background-color: $footerColor;
 
-    nav > section > ul,
-    nav > section > a {
-        display: none;
-    }
-
-    nav > article {
-        background-color: $footerColor;
-    }
-
-    nav aside {
-        min-height: 14vh;
-        align-items: center;
-        justify-content: center;
-        row-gap: 2vh;
-    }
-
-    nav > article span {
-        display: flex;
-        align-items: center;
-        column-gap: 2vh;
-        color: white;
-    }
-
-    nav > article i,
-    nav > article a {
-        color: white;
-        font-size: 14px;
-    }
-
-    nav > article ul {
-        display: flex;
-        width: 50%;
-    }
-
-    nav > article li {
-        display: flex;
-        width: 100%;
-        justify-content: center;
-    }
-
-    nav > section {
-        min-height: 8vh;
-        background-color: white;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        // column-gap: 32vh;
-    }
-
-    nav > section h2 {
-        width: 80%;
-        display: flex;
-        column-gap: 2vh;
-        color: $mainColor;
-    }
+            span {
+                display: flex;
+                align-items: center;
+                column-gap: 2vh;
+                color: white;
+            }
     
-    details {
-        width: 10%;
+            i,
+            a {
+                color: white;
+                font-size: 14px;
+            }
+            
+            ul {
+                display: flex;
+                width: 50%;
+            }
+    
+            li {
+                display: flex;
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        > section {
+            width: 92%;
+            padding: 0vh 4%;
+            min-height: 8vh;
+            background-color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            h2 {
+                // width: 80%;
+                display: flex;
+                column-gap: 2vh;
+                color: $mainColor;
+            }
+
+            > ul,
+            > a {
+            display: none;
+            }
+        }
+
+        aside {
+            min-height: 14vh;
+            align-items: center;
+            justify-content: center;
+            row-gap: 2vh;
+        }
+
+        
     }
 
-    nav summary {
+    details {
+        width: 92%;
+        position: absolute;
+        text-align: right;
+
+        ul {
+            position: absolute;
+            width: 100%;
+            padding-top: 1vh;
+        }
+
+        li {
+            display: flex;
+            width: 100%;
+            background-color: white;
+        }
+
+        a {
+            width: 100%;
+            padding: 2vh;
+            text-align: left;
+            color: $footerColor;
+            font-weight: 600;
+
+        }
+
+    }
+
+    summary {
         color: gray;
         border: 1px solid gainsboro;
         padding: 1vh 2vh;
@@ -106,12 +101,6 @@ footer aside {
         // align-items: center;
         // height: 5vh;
         // width: 5vh;
-    }
-
-
-    details ul {
-        // position: absolute;
-        width: 50vh;
     }
 
     // header
@@ -126,46 +115,105 @@ footer aside {
     // footer
     footer {
         background-color: $footerColor;
+
+        > article {
+            min-height: 150vh;
+            justify-content: center;
+            align-items: center;
+            row-gap: 5vh;
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                row-gap: 3vh;
+            }
+
+            ol {
+                display: flex;
+                width: 50%;
+            }
+
+            li {
+                width: 100%;
+                column-gap: 2vh;
+                align-items: center;
+            }
+        }
+
+        > section {
+            border-top: 1px solid dimgray;
+            min-height: 20vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            row-gap: 2vh;
+
+            p {
+                width: 90%;
+                color: white;
+            }
+
+            ul {
+                display: flex;
+                width: 80%;
+            }
+
+            li {
+                display: flex;
+                justify-content: center;
+                width: 100%;
+            }
+
+        }
+
+        span {
+            color: $mainColor;
+        }
+
+        aside {
+            width: 90%;
+            row-gap: 4vh;
+        }
+
+        a {
+            color: white;
+        }
+
+        address,
+        i,
+        p {
+            color: white;
+        }
+
+        h3 {
+            color: $mainColor;
+            font-size: 22px;
+        }
+
+        form {
+            display: flex;
+            width: 100%;
+        }
+
+        input {
+            border: none;
+            padding: 3vh;
+            width: 70%;
+        }
+
+        [type="submit"] {
+            width: 30%;
+            background-color: $mainColor;
+            color: white;
+            transition: .4s;
+            border: none;
+            border: 1px solid $mainColor;
+        }
+
     }
     
-    footer aside {
-        width: 90%;
-        row-gap: 4vh;
-    }
-
-    footer a {
-        color: white;
-    }
-
-    footer address,
-    footer i,
-    footer p {
-        color: white;
-    }
-
-    footer h3 {
-        color: $mainColor;
-        font-size: 22px;
-    }
-
-    footer > article {
-        min-height: 150vh;
-        justify-content: center;
-        align-items: center;
-        row-gap: 5vh;
-    }
-
-    footer > article ul {
-        display: flex;
-        flex-direction: column;
-        row-gap: 3vh;
-    }
-
-    footer > article ol {
-        display: flex;
-        width: 50%;
-    }
-
     ol  [href="#"] {
         border: 1px solid white;
         border-radius: 50%;
@@ -175,69 +223,4 @@ footer aside {
         justify-content: center;
         align-items: center;
     }
-
-    footer > article li {
-        width: 100%;
-        column-gap: 2vh;
-        align-items: center;
-    }
-
-    footer form {
-        display: flex;
-        width: 100%;
-    }
-
-    footer input {
-        border: none;
-        padding: 3vh;
-        width: 70%;
-    }
-
-    footer [type="submit"]{
-        width: 30%;
-        background-color: $mainColor;
-        color: white;
-        transition: .4s;
-        border: none;
-        border: 1px solid $mainColor;
-    }
-
-
-
-
-
-    footer > section {
-        border-top: 1px solid dimgray;
-        min-height: 20vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        row-gap: 2vh;
-    }
-    
-    footer > section p {
-        width: 90%;
-        color: white;
-    }
-
-    footer span {
-        color: $mainColor;
-    }
-
-    footer > section ul {
-        display: flex;
-        width: 80%;
-    }
-
-    footer > section li {
-        display: flex;
-        justify-content: center;
-        width: 100%;
-    }
-
-
-
-
 }
