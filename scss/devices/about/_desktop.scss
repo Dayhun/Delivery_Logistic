@@ -163,22 +163,24 @@
         justify-content: center;
     }
 
-    footer ol a {
+    footer ol [href="#"] {
         width: 100%;
         height: 100%;
         border-radius: 50%;
-        text-align: center;
+        @include flexRow;
+        align-items: center;
+        justify-content: center;
+    }
+
+    footer ol a:hover {
+        color: #1f1f2e;
+        background-color: white;
     }
 
     footer i,
     footer address,
     footer p {
         color: white;
-    }
-
-    footer ol a:hover {
-        color: #1f1f2e;
-        background-color: white;
     }
 
     footer aside:first-child > ul a:hover,
