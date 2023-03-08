@@ -6,97 +6,97 @@
 
     nav {
         @include flexColumn;
-    }
 
-    nav aside {
-        background-color: #1f1f2d;
-        color: white;
-        padding: 1% 3%;
-        @include flexRow;
-        justify-content: space-between;
-    }
+        aside {
+            background-color: #1f1f2d;
+            color: white;
+            padding: 1% 3%;
+            @include flexRow;
+            justify-content: space-between;
 
-    nav aside > span,
-    nav aside > ul {
-        @include flexRow;
-        column-gap: 1vw;
-        align-items: center;
-        font-size: 14px;
-    }
+            > span,
+            > ul {
+                @include flexRow;
+                column-gap: 1vw;
+                align-items: center;
+                font-size: 14px;
+            }
 
-    nav aside a {
-        color: white;
-        text-decoration: none;
-    }
+            > ul {
+                list-style-type: none;
+            }
 
-    nav aside > ul {
-        list-style-type: none;
-    }
+            a {
+                color: white;
+                text-decoration: none;
+            }
 
-    nav aside a:hover {
-        color: $mainColor;
-    }
+            a:hover {
+                color: $mainColor;
+            }
+        }
 
-    nav > section {
-        @include flexRow;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 3%;
-        height: 7vh;
-    }
+        > section {
+            @include flexRow;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 3%;
+            height: 7vh;
 
-    nav > section > h2 {
-        @include flexRow;
-        column-gap: 1vw;
-        color: $mainColor;
-        font-weight: 800;
-        font-size: 30px;
-    }
+            > h2 {
+                @include flexRow;
+                column-gap: 1vw;
+                color: $mainColor;
+                font-weight: 800;
+                font-size: 30px;
+            }
 
-    nav > section > ul {
-        @include flexRow;
-        list-style-type: none;
-        width: 20%;
-        height: 100%;
-    }
+            > ul {
+                @include flexRow;
+                list-style-type: none;
+                width: 20%;
+                height: 100%;
+            }
 
-    nav > section li {
-        width: 100%;
-    }
+            li {
+                width: 100%;
+            }
 
-    nav > section > ul a {
-        @include flexRow;
-        height: 100%;
-        justify-content: center;
-        align-items: center;
-        text-decoration: none;
-        color: black;
-        font-weight: 600;
-    }
+            > ul a {
+                @include flexRow;
+                height: 100%;
+                justify-content: center;
+                align-items: center;
+                text-decoration: none;
+                color: black;
+                font-weight: 600;
+            }
 
-    nav > section > ul a:hover {
-        background-color: $mainColor;
-        color: white;
-    }
+            > ul a:hover {
+                background-color: $mainColor;
+                color: white;
+            }
 
-    nav > section > a {
-        background-color: $mainColor;
-        color: white;
-        text-decoration: none;
-        width: 8%;
-        text-align: center;
-        padding: 5px;
-        border: 2px solid $mainColor;
-    }
+            > a {
+                background-color: $mainColor;
+                color: white;
+                text-decoration: none;
+                width: 8%;
+                text-align: center;
+                padding: 5px;
+                border: 2px solid $mainColor;
+            }
 
-    nav > section > a:hover {
-        background-color: transparent;
-        color: $mainColor;
-    }
+            > a:hover {
+                background-color: transparent;
+                color: $mainColor;
+            }
 
-    nav > section > ul > li:nth-child(2) > a {
-        background-color: $mainColor;
-        color: white;
+            > ul > li:nth-child(2) > a {
+                background-color: $mainColor;
+                color: white;
+            }
+        }
     }
 
     // MAIN
@@ -107,134 +107,134 @@
     // FOOTER
     footer {
         background-color: #1f1f2e;
-    }
 
-    footer > article {
-        padding: 4% 3%;
-        @include flexRow;
-        justify-content: space-between;
-    }
+        > article {
+            padding: 4% 3%;
+            @include flexRow;
+            justify-content: space-between;
 
-    footer > article > aside:first-child,
-    footer > article > aside:nth-child(2) {
-        width: 20%;
-        @include flexColumn;
-        row-gap: 2vh;
-    }
+            > aside:first-child,
+            > aside:nth-child(2) {
+                width: 20%;
+                @include flexColumn;
+                row-gap: 2vh;
+            }
 
-    footer > article > aside:last-child {
-        width: 50%;
-        @include flexColumn;
-        row-gap: 2vh;
-    }
+            > aside:last-child {
+                width: 50%;
+                @include flexColumn;
+                row-gap: 2vh;
+            }
+        }
 
-    footer h3,
-    footer span {
-        color: $mainColor;
-    }
+        h3,
+        span {
+            color: $mainColor;
+        }
 
-    footer h3 {
-        font-size: 23px;
-    }
+        h3 {
+            font-size: 23px;
+        }
 
-    footer ul {
-        list-style-type: none;
-        @include flexColumn;
-        row-gap: 1vh;
-    }
+        ul {
+            list-style-type: none;
+            @include flexColumn;
+            row-gap: 1vh;
+        }
 
-    footer li {
-        @include flexRow;
-        column-gap: 1vw;
-    }
+        li {
+            @include flexRow;
+            column-gap: 1vw;
+        }
 
-    footer a {
-        text-decoration: none;
-        color: white;
-    }
+        a {
+            text-decoration: none;
+            color: white;
+        }
 
-    footer ol {
-        @include flexRow;
-        column-gap: 10px;
-    }
+        ol {
+            @include flexRow;
+            column-gap: 10px;
 
-    footer ol > li {
-        border: 1px solid white;
-        border-radius: 50%;
-        width: 2vw;
-        height: 2vw;
-        @include flexRow;
-        align-items: center;
-        justify-content: center;
-    }
+            > li {
+                border: 1px solid white;
+                border-radius: 50%;
+                width: 2vw;
+                height: 2vw;
+                @include flexRow;
+                align-items: center;
+                justify-content: center;
+            }
 
-    footer ol [href="#"] {
-        width: 100%;
-        height: 100%;
-        border-radius: 50%;
-        @include flexRow;
-        align-items: center;
-        justify-content: center;
-    }
+            [href="#"] {
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                @include flexRow;
+                align-items: center;
+                justify-content: center;
+            }
 
-    footer ol a:hover {
-        color: #1f1f2e;
-        background-color: white;
-    }
+            a:hover {
+                color: #1f1f2e;
+                background-color: white;
+            }
+        }
 
-    footer i,
-    footer address,
-    footer p {
-        color: white;
-    }
+        i,
+        address,
+        p {
+            color: white;
+        }
 
-    footer aside:first-child > ul a:hover,
-    footer section a:hover {
-        color: $mainColor;
-    }
+        aside:first-child > ul a:hover,
+        section a:hover {
+            color: $mainColor;
+        }
 
-    footer aside:nth-child(2) > ul a:hover {
-        text-decoration: underline;
-    }
+        aside:nth-child(2) > ul a:hover {
+            text-decoration: underline;
+        }
 
-    footer form {
-        @include flexRow;
-        width: 100%;
-    }
+        form {
+            @include flexRow;
+            width: 100%;
+        }
 
-    footer [type="email"] {
-        width: 75%;
-        padding: 3%;
-        border: 1px solid transparent;
-        font-size: 20px;
-        color: $mainColor;
-    }
+        [type="email"] {
+            width: 75%;
+            padding: 3%;
+            border: 1px solid transparent;
+            font-size: 20px;
+            color: $mainColor;
+        }
 
-    footer [type="submit"] {
-        width: 25%;
-        padding: 3%;
-        border: 1px solid transparent;
-        background-color: $mainColor;
-        color: white;
-        font-size: 20px;
-    }
+        [type="submit"] {
+            width: 25%;
+            padding: 3%;
+            border: 1px solid transparent;
+            background-color: $mainColor;
+            color: white;
+            font-size: 20px;
+        }
 
-    footer [type="submit"]:hover {
-        background-color: transparent;
-        border: 1px solid $mainColor;
-        color: $mainColor;
-        cursor: pointer;
-    }
+        [type="submit"]:hover {
+            background-color: transparent;
+            border: 1px solid $mainColor;
+            color: $mainColor;
+            cursor: pointer;
+        }
 
-    footer > section {
-        @include flexRow;
-        justify-content: space-between;
-        padding: 2% 3%;
-        border-top: 1px solid gray;
-    }
+        > section {
+            @include flexRow;
+            justify-content: space-between;
+            padding: 2% 3%;
+            border-top: 1px solid gray;
 
-    footer > section > ul {
-        @include flexRow;
-        column-gap: 2vw;
+            > ul {
+                @include flexRow;
+                column-gap: 2vw;
+            }
+        }
     }
 }
