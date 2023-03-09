@@ -7,7 +7,7 @@
             background-color: $footerColor;
 
             span {
-                @include displayRow(3vw);
+                @include displayRow(2vw);
                 align-items: center;
                 color: white;
             }
@@ -40,9 +40,10 @@
 
             h2 {
                 @include displayRow(2vh);
+                align-items: center;
                 color: $mainColor;
                 font-size: 30px;
-                font-weight: 900;
+                font-weight: 700;
             }
 
             > ul,
@@ -117,7 +118,7 @@
             > h1 {
                 font-size: 45px;
                 color: white;
-                font-weight: 900;
+                font-weight: 700;
             }
 
             > article {
@@ -163,13 +164,16 @@
             background-color: #f2f2f4;
 
             > section {
-                @include displayRow(10vw);
+                @include displayRow(6vw);
             }
 
             aside {
                 @include displayRow(3vw);
                 align-items: center;
                 color: gray;
+                > p {
+                    font-size: 15px;
+                }
             }
 
             i {
@@ -177,8 +181,8 @@
             }
 
             img {
-                width: 10vw;
-                height: 10vw;
+                width: 12vw;
+                height: 12vw;
                 border-radius: 50%;
             }
 
@@ -192,7 +196,8 @@
 
             > article > a {
                 color: $mainColor;
-                text-decoration: underline;
+                border-bottom: 1px solid $mainColor;
+                width: fit-content;
             }
         }
     }
@@ -262,6 +267,7 @@
 
             > aside {
                 @include displayRow(2vw);
+                align-items: center;
             }
 
             i {
@@ -270,8 +276,8 @@
 
             > p {
                 background-color: #f2f2f4;
-                width: 8vw;
-                font-weight: 800;
+                width: 9vw;
+                font-weight: 700;
                 text-align: center;
             }
         }
@@ -312,7 +318,7 @@
         @include displayColumn(2vh);
 
         > h3 {
-            font-size: 25px;
+            font-size: 23px;
             font-weight: 800;
         }
 
@@ -323,7 +329,7 @@
 
             > p {
                 background-color: #f2f2f4;
-                padding: 2% 4%;
+                padding: 2% 3%;
             }
         }
     }
@@ -368,11 +374,12 @@
             > aside {
                 background-color: $mainColor;
                 padding: 10%;
-                @include displayRow;
+                @include displayRow(1vw);
                 align-items: flex-start;
             }
 
             i {
+                padding-top: 2%;
                 font-size: 23px;
                 color: white;
             }
@@ -385,7 +392,7 @@
 
             > iframe {
                 width: 100%;
-                height: 50vh;
+                height: 60vh;
             }
         }
     }
@@ -401,7 +408,7 @@
         }
 
         > h2 {
-            font-size: 35px;
+            font-size: 27px;
             font-weight: 800;
             padding-bottom: 1vh;
         }
@@ -442,7 +449,7 @@
         background-color: $footerColor;
 
         > article {
-            min-height: 120vh;
+            min-height: 150vh;
             justify-content: center;
             align-items: center;
             row-gap: 7vh;
@@ -475,6 +482,7 @@
             ::placeholder {
                 font-size: 15px;
                 color: gray;
+                padding-left: 8%;
             }
         }
 
