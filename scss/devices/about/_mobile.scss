@@ -228,7 +228,7 @@
             @include displayRow;
 
             > input {
-                border: 1px solid transparent;
+                border: none;
                 color: $mainColor;
             }
 
@@ -426,7 +426,7 @@
             > textarea {
                 background-color: white;
                 padding: 5% 8%;
-                border: 1px solid transparent;
+                border: none;
                 color: $mainColor;
             }
 
@@ -453,12 +453,13 @@
         background-color: $footerColor;
 
         > article {
-            min-height: 150vh;
+            padding: 15vh 0;
             justify-content: center;
             align-items: center;
             row-gap: 7vh;
 
             ul {
+                width: 100%;
                 @include displayColumn(2vh);
             }
 
@@ -488,12 +489,18 @@
                 color: gray;
                 padding-left: 8%;
             }
+
+            > aside:nth-child(2) {
+                a {
+                    @include displayRow(2vw);
+                    align-items: center;
+                }
+            }
         }
 
         > section {
-            padding: 0 4%;
+            padding: 10% 4%;
             border-top: 1px solid dimgray;
-            min-height: 20vh;
             @include displayColumn(2vh);
             justify-content: center;
             align-items: center;
@@ -549,6 +556,7 @@
             border: none;
             padding: 2vh;
             width: 70%;
+            color: $mainColor;
         }
 
         [type="submit"] {
