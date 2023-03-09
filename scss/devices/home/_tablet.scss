@@ -70,6 +70,26 @@
         }
     }
 
+    // main 
+
+
+    // blog 
+    .blog {~~
+        > section {
+            width: 90%;
+            justify-content: space-between;
+
+            figure {
+                width: 48%;
+            }
+
+            a:hover {
+                column-gap: 3vh;
+                width: 21vh;
+            }
+        }
+    }
+
     // footer
     footer {
 
