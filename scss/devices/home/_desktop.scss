@@ -85,6 +85,58 @@
 
     // main
 
+    // about
+    .about {
+        flex-direction: row;
+        padding: 0 5%;
+        width: 90%;
+        column-gap: 5vh;
+
+        > figure {
+            width: 40%;
+            height: 100%;
+        }
+
+        > section {
+            width: 50%;
+        }
+    }
+
+    // services
+    .services {
+        padding: 0;
+        figure {
+            flex-direction: row;
+            min-height: 60vh;
+            column-gap: 5vh;
+
+            img {
+                width: 40%;
+                min-height: 60vh;
+            }
+        }
+
+        figcaption {
+
+            padding: 10vh 0;
+
+            > a {
+                width: 20%;
+            }
+        }
+    }
+
+    // team
+    .team {
+        figure {
+            width: 23%;
+
+            ul {
+                column-gap: 2vh;
+            }
+        }
+    }
+
     // blog
     .blog {
         ul {
