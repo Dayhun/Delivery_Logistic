@@ -278,8 +278,8 @@
             }
 
             > ol a:hover {
-                border: 1px solid $mainColor;
-                color: $mainColor;
+                background-color: white;
+                color: $footerColor;
             }
         }
 
