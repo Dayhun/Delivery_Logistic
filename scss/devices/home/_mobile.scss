@@ -1,4 +1,12 @@
 @media (min-width: $mobileVersion) {
+
+    %button {
+        background-color: $mainColor;
+        border: 2px solid transparent;
+        color: white;
+        font-weight: 600;
+    }
+
     img {
         width: 20%;
     }
@@ -154,17 +162,17 @@
 
         [type="submit"]{
             width: 45%;
-            background-color: $mainColor;
-            color: white;
-            font-weight: 600;
+            @extend %button
         }
     }
 
     // main
     main {
         align-items: center;
+        row-gap: 5vh;
     }
 
+    // about
     .about {
         width: 100%;
         align-items: center;
@@ -211,6 +219,7 @@
         h2 {
             font-size: 30px;
             font-weight: 600;
+            width: 80%;
         }
 
         aside {
@@ -226,8 +235,7 @@
 
         a {
             background-color: $mainColor;
-            // padding: 4vh;
-            // border: 5px solid salmon;
+            border: 7px solid #FFAB8A;
             border-radius: 50%;
             color: black;
             height: 10vh;
@@ -235,7 +243,73 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            font-size: 20px;
         }
+    }
+
+    // services
+    .services {
+        background-color: gainsboro;
+        align-items: center;
+        padding-bottom: 5vh;
+
+        > figure {
+            width: 90%;
+            @include displayColumn(5vh);
+        }
+
+        img {
+            width: 100%;
+        }
+
+        figcaption {
+            @include displayColumn(5vh)
+        }
+
+        article {
+            @include displayColumn (1vh);
+        }
+
+        h5 {
+            color: $mainColor;
+            font-size: 14px;
+        }
+
+        small {
+            font-size: 16px;
+        }
+
+        h2 {
+            font-size: 30px;
+            font-weight: 600;
+            width: 80%;
+        }
+
+        ul {
+            @include displayColumn(1vh);
+        }
+
+        li {
+            @include displayRow(2vh);
+            align-items: center;
+        }
+
+        h6 {
+            width: 1vh;
+            height: 1vh;
+            border-radius: 50%;
+            background-color: $mainColor;
+            border: 3px solid gainsboro;
+            outline: 2px solid $mainColor
+        }
+
+        a {
+            @extend %button;
+            width: 30%;
+            padding: 1vh;
+            text-align: center;
+        } 
+
     }
     
     // footer
