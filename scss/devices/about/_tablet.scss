@@ -172,7 +172,7 @@
     // PLAIN TEXT
     .plain {
         > h3 {
-            font-size: 25px;
+            font-size: 23px;
             font-weight: 800;
         }
 
@@ -181,7 +181,7 @@
         }
 
         > aside > a {
-            width: 25%;
+            width: 20%;
             padding: 2%;
             border: 2px solid $mainColor;
 
@@ -234,7 +234,10 @@
         }
 
         [type="submit"] {
+            padding: 2%;
             width: 30%;
+            font-size: 17px;
+            text-align: center;
             border: 2px solid $mainColor;
 
             &:hover {
