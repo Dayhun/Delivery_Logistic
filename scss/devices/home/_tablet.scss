@@ -1,3 +1,40 @@
 @media (min-width: $tabletVersion) {
+
+    // nav
+    nav {
+        > article {
+
+            ul {
+                width: 30%;
+            }
+
+            a {
+                font-size: 16px;
+            }
+        }
+
+        > section {
+            min-height: 12vh;
+
+            h2 {
+                font-size: 32px;
+            }
+        }
+
+        a:hover {
+            color: $mainColor;
+        }
+
+        details {
+            a:hover {
+                background-color: $mainColor;
+                color: white;
+            }
+        }
+    }
+
+    summary {
+        font-size: 20px;
+    }
     
 }
