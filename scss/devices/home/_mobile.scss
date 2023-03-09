@@ -166,10 +166,9 @@
         }
     }
 
-    // main
     main {
         align-items: center;
-        row-gap: 5vh;
+        row-gap: 15vh;
     }
 
     // about
@@ -311,6 +310,73 @@
         } 
 
     }
+
+    // team
+    .team {
+        align-items: center;
+        row-gap: 5vh;
+
+        figcaption{
+            section {
+                display: none;
+            }
+        }
+
+        > article {
+            width: 90%;
+            @include displayColumn(1vh);
+            align-items: center;
+            text-align: center;
+        }
+
+        h5 {
+            color: $mainColor;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        h2 {
+            font-size: 30px;
+            font-weight: 600;
+            width: 80%;
+            font-weight: 600;
+        }
+
+        > section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            row-gap: 10vh;
+        }
+
+        figure {
+            width: 90%;
+            background-color: gainsboro;
+            border-bottom: 5px solid $mainColor;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            article {
+                height: 15vh;
+                @include displayColumn(1vh);
+                justify-content: center;
+            }
+        }
+
+        img {
+            width: 100%;
+            height: 60vh;
+        }
+
+        strong {
+            font-size: 18px;
+        }
+
+    }
+
+
     
     // footer
     footer {
