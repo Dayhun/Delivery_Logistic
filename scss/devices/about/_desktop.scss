@@ -5,65 +5,40 @@
     }
 
     nav {
-        @include displayColumn;
-
         aside {
-            background-color: #1f1f2d;
-            color: white;
-            padding: 1% 3%;
-            @include displayRow;
+            min-height: 5vh;
+            padding: 0 4%;
+            flex-direction: row;
             justify-content: space-between;
+        }
 
-            > span,
-            > ul {
-                @include displayRow;
+        > article {
+            span {
                 column-gap: 1vw;
-                align-items: center;
-                font-size: 14px;
             }
 
-            > ul {
-                list-style-type: none;
-            }
-
-            a {
-                color: white;
-                text-decoration: none;
-            }
-
-            a:hover {
-                color: $mainColor;
+            ul {
+                width: 12%;
             }
         }
 
         > section {
-            @include displayRow;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 3%;
-            height: 7vh;
-
-            > h2 {
-                @include displayRow(1vw);
-                color: $mainColor;
-                font-weight: 800;
-                font-size: 30px;
-            }
-
             > ul {
                 @include displayRow;
                 list-style-type: none;
-                width: 20%;
+                width: 30%;
                 height: 100%;
             }
 
             li {
                 width: 100%;
+                justify-content: center;
             }
 
             > ul a {
                 @include displayRow;
                 height: 100%;
+                width: 100%;
                 justify-content: center;
                 align-items: center;
                 text-decoration: none;
@@ -77,12 +52,13 @@
             }
 
             > a {
+                @include displayRow;
+                justify-content: center;
                 background-color: $mainColor;
                 color: white;
                 text-decoration: none;
-                width: 8%;
-                text-align: center;
-                padding: 5px;
+                width: 12%;
+                padding: 0.5% 1%;
                 border: 2px solid $mainColor;
             }
 
@@ -98,136 +74,255 @@
         }
     }
 
-    // MAIN
-    main img {
-        width: 10%;
+    // HEADER
+    header {
+        height: 40vh;
+
+        aside {
+            row-gap: 1vh;
+
+            > h1 {
+                font-size: 55px;
+            }
+        }
+
+        aside > article {
+            column-gap: 1vw;
+
+            a {
+                font-weight: 300;
+            }
+
+            span {
+                width: 1.5vw;
+                height: 1.5vw;
+            }
+        }
     }
 
-    // FOOTER
-    footer {
-        background-color: #1f1f2e;
+    // MAIN
+    .main-top,
+    .main-bottom {
+        @include displayRow;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
 
-        > article {
-            padding: 4% 3%;
-            @include displayRow;
-            justify-content: space-between;
+    // MAIN LEFT
+    .main-left {
+        width: 65%;
 
-            > aside:first-child,
-            > aside:nth-child(2) {
-                width: 20%;
-                @include displayColumn(2vh);
+        > figure > img {
+            height: 65vh;
+        }
+
+        figcaption {
+            padding: 3%;
+
+            > section {
+                column-gap: 3vw;
             }
 
-            > aside:last-child {
-                width: 50%;
-                @include displayColumn(2vh);
+            aside {
+                column-gap: 1vw;
+            }
+
+            img {
+                width: 5vw;
+                height: 5vw;
             }
         }
+    }
 
-        h3,
-        span {
-            color: $mainColor;
+    // MAIN RIGHT
+    .main-right {
+        width: 30%;
+        padding-top: 0;
+
+        > figure {
+            > img {
+                width: 100%;
+                height: 30vh;
+            }
+        }
+    }
+
+    // KEYWORD
+    .keyword {
+        padding: 7%;
+
+        > form {
+            [type="text"] {
+                width: 85%;
+                padding: 5% 7%;
+            }
+
+            [type="submit"] {
+                width: 15%;
+            }
+        }
+    }
+
+    // CATEGORIES
+    .categories {
+        > h3 {
+            font-size: 25px;
         }
 
-        h3 {
-            font-size: 23px;
-        }
-
-        ul {
-            list-style-type: none;
-            @include displayColumn(1vh);
+        > ul {
+            padding: 7%;
         }
 
         li {
-            @include displayRow(1vw);
-        }
+            padding: 4%;
 
-        a {
-            text-decoration: none;
-            color: white;
-        }
-
-        ol {
-            @include displayRow(10px);
-
-            > li {
-                border: 1px solid white;
-                border-radius: 50%;
-                width: 2vw;
-                height: 2vw;
-                @include displayRow;
-                align-items: center;
-                justify-content: center;
+            > aside {
+                column-gap: 1vw;
             }
 
-            [href="#"] {
+            > p {
+                width: 4vw;
+            }
+        }
+    }
+
+    // RECENT POST
+    .post {
+        > h3 {
+            font-size: 25px;
+        }
+
+        > aside {
+            figure {
                 width: 100%;
+                height: 12vh;
+            }
+
+            img {
+                width: 6vw;
                 height: 100%;
-                border-radius: 50%;
-                @include displayRow;
-                align-items: center;
-                justify-content: center;
             }
 
-            a:hover {
-                color: #1f1f2e;
-                background-color: white;
+            figcaption {
+                padding: 3%;
+            }
+
+            p {
+                font-size: 15px;
+            }
+        }
+    }
+
+    // TAG CLOUD
+    .tag {
+        > h3 {
+            font-size: 25px;
+        }
+
+        > aside {
+            column-gap: 1vw;
+            row-gap: 1vw;
+
+            > p {
+                padding: 2% 4%;
+            }
+        }
+    }
+
+    // PLAIN TEXT
+    .plain {
+        > h3 {
+            font-size: 25px;
+        }
+
+        > aside {
+            padding: 7%;
+        }
+
+        > aside > a {
+            width: 30%;
+        }
+    }
+
+    // MAIN BOTTOM
+    .main-bottom {
+        > article {
+            width: 40%;
+            > aside {
+                padding: 3%;
             }
         }
 
-        i,
-        address,
-        p {
-            color: white;
+        .contact {
+            width: 55%;
+
+            > small {
+                font-size: 14px;
+            }
+
+            > h2 {
+                font-size: 27px;
+            }
+
+            > form {
+                padding: 4%;
+
+                > input,
+                textarea {
+                    padding: 3% 4%;
+                }
+            }
+
+            [type="submit"] {
+                padding: 1.5%;
+                font-size: 18px;
+            }
+        }
+    }
+
+    // FOOTER
+    footer > article {
+        padding: 8vh 4%;
+
+        > aside {
+            > h3 {
+                font-size: 25px;
+            }
+
+            address,
+            a,
+            p {
+                font-size: 17px;
+            }
         }
 
-        aside:first-child > ul a:hover,
-        section a:hover {
-            color: $mainColor;
-        }
-
-        aside:nth-child(2) > ul a:hover {
-            text-decoration: underline;
+        ol [href="#"] {
+            height: 4.5vh;
+            width: 4.5vh;
+            font-size: 22px;
         }
 
         form {
-            @include displayRow;
-            width: 100%;
-        }
-
-        [type="email"] {
-            width: 75%;
-            padding: 3%;
-            border: 1px solid transparent;
-            font-size: 20px;
-            color: $mainColor;
-        }
-
-        [type="submit"] {
-            width: 25%;
-            padding: 3%;
-            border: 1px solid transparent;
-            background-color: $mainColor;
-            color: white;
-            font-size: 20px;
-        }
-
-        [type="submit"]:hover {
-            background-color: transparent;
-            border: 1px solid $mainColor;
-            color: $mainColor;
-            cursor: pointer;
-        }
-
-        > section {
-            @include displayRow;
-            justify-content: space-between;
-            padding: 2% 3%;
-            border-top: 1px solid gray;
-
-            > ul {
-                @include displayRow(2vw);
+            ::placeholder {
+                padding-left: 3%;
             }
+
+            [type="text"] {
+                width: 80%;
+            }
+
+            [type="submit"] {
+                width: 20%;
+            }
+        }
+    }
+
+    footer > section {
+        flex-direction: row;
+        padding: 2% 4%;
+
+        > ul {
+            width: 40%;
         }
     }
 }
