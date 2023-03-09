@@ -199,6 +199,10 @@
                 border-bottom: 1px solid $mainColor;
                 width: fit-content;
             }
+
+            > article > p {
+                color: gray;
+            }
         }
     }
 
