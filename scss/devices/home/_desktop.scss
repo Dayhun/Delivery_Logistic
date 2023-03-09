@@ -85,6 +85,25 @@
 
     // main
 
+    // blog
+    .blog {
+        ul {
+            justify-content: start;
+            column-gap: 5vh;
+        }
+
+        li {
+            p{
+                width: 100%;
+            }
+        }
+
+        figcaption {
+            padding: 4%;
+            row-gap: 4vh;
+        }
+    }
+
 
     // footer
     footer {
@@ -100,8 +119,23 @@
             min-height: 10vh;
             flex-direction: row;
             align-items: center;
+            justify-content: space-between;
             width: 90%;
             padding: 0 5%;
+
+            p {
+                width: 70%;
+                text-align: start;
+            }
+
+            ul {
+                width: 30%;
+            }
+
+            li {
+                width: 100%;
+            }
+
         }    
     }
 }
