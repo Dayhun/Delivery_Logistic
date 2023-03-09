@@ -230,15 +230,8 @@
             }
         }
 
-        ol a:hover {
-            background-color: white;
-            color: $footerColor;
-
-        }
-
         aside {
-
-            width: 2%;
+            width: 20%;
 
             &:first-child {
                 width: 30%;
@@ -251,6 +244,13 @@
             a:hover {
                 color: white;
                 text-decoration: underline white;
+            }
+
+            ol a:hover {
+                background-color: white;
+                color: $footerColor;
+                text-decoration: none;
+    
             }
 
         }

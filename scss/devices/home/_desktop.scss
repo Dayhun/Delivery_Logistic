@@ -82,4 +82,26 @@
             padding: 2vh;
         }
     } 
+
+    // main
+
+
+    // footer
+    footer {
+
+        aside {
+
+            &:last-child {
+                width:40%;
+            }
+        }
+
+        > section {
+            min-height: 10vh;
+            flex-direction: row;
+            align-items: center;
+            width: 90%;
+            padding: 0 5%;
+        }    
+    }
 }
