@@ -1,3 +1,85 @@
 @media (min-width: $desktopVersion) {
+    // nav 
+    nav {
+        aside {
+            width: 90%;
+            padding: 0 5%;
+            min-height: 8vh;
+            flex-direction: row;
+            justify-content: space-between;
+
+            ul {
+                width: 20%;
+            }
+        }
+
+        > article {
+            a {
+                font-size: 14px;
+            }
+        }
+
+        > section {
+
+            > a {
+                display: block;
+                border: 3px solid $mainColor;
+                background-color: $mainColor;
+                color: white;
+                padding: 1vh 2vh;
+
+                &:hover {
+                    background-color: $footerColor;
+                    color: $mainColor;
+                }
+            } 
+
+            > ul {
+                display: flex;
+                width: 25%;
+                height: 12vh;
+                
+                li {
+                    display: flex;
+                    width: 100%;
+                    height: 100%;
+        
+                    
+                }
+
+                a {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;
+                    height: 100%;
+                    color: $footerColor;
     
+                    &:hover {
+                        background-color: $mainColor;
+                        color: white;
+                    }
+                }
+            }
+        }
+
+        details {
+            display: none;
+        }
+    }
+
+    // header
+    header {
+        form {
+            width: 50%;
+        }
+
+        h1 {
+            font-size: 50px;
+        }
+
+        input {
+            padding: 2vh;
+        }
+    } 
 }
