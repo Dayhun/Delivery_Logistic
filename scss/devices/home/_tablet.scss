@@ -1,4 +1,25 @@
 @media (min-width: $tabletVersion) {
+    @keyframes pulse {
+        0% {
+            transform: scale(0.9);
+            box-shadow: 0 0 0 1px rgb(255, 171, 138, 1);
+
+        }
+
+        70% {
+            transform: scale(1);
+            box-shadow: 0 0 0 10px rgb(255, 171, 138, .2);
+
+        }
+
+        100% {
+            transform: scale(0.9);
+            box-shadow: 0 0 0 15px rgb(255, 171, 138, 0);
+
+            
+        }
+
+    }
 
     // nav
     nav {
@@ -63,14 +84,38 @@
             transition: .4s;
 
             &:hover {
-                background-color: white;
+                background-color: $footerColor;
                 border-color: $mainColor;
                 color: $mainColor;
             }
         }
     }
 
-    // main 
+    // main
+
+    // about
+    .about {
+        a {
+            border-color: transparent;
+
+            &:hover {
+                animation-name: pulse;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+                animation-duration: 1s;
+            }
+
+        }
+    }
+
+    // services
+    .services {
+        a:hover {
+            background-color: $footerColor;
+            border-color: $mainColor;    
+            color: $mainColor;
+        }
+    }
 
     // team
     .team {
@@ -160,7 +205,7 @@
 
             a:hover {
                 column-gap: 3vh;
-                width: 21vh;
+                width: 22vh;
             }
         }
     }
@@ -226,6 +271,12 @@
             a {
                 width: 100%;
             }
+        }
+
+        [type="submit"]:hover {
+            background-color: $footerColor;
+            color: $mainColor;
+
         }
     }
     
