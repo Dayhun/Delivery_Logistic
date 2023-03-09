@@ -36,5 +36,38 @@
     summary {
         font-size: 20px;
     }
+
+    // header 
+    header {
+
+        h3 {
+            font-size: 32px;
+        }
+
+        h1 {
+            width: 100%;
+            font-size: 46px;
+
+        }
+
+        form {
+            width: 80%;
+        }
+
+        input {
+            width: 75%;
+        }
+
+        [type="submit"]{
+            width: 25%;
+            transition: .4s;
+
+            &:hover {
+                background-color: white;
+                border-color: $mainColor;
+                color: $mainColor;
+            }
+        }
+    }
     
 }
