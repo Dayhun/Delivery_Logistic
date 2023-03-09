@@ -166,9 +166,11 @@
         }
     }
 
+    // main
     main {
         align-items: center;
         row-gap: 15vh;
+        padding: 15vh 0vh;
     }
 
     // about
@@ -367,7 +369,6 @@
 
         img {
             width: 100%;
-            height: 60vh;
         }
 
         strong {
@@ -376,7 +377,85 @@
 
     }
 
+    // blog
+    .blog {
+        align-items: center;
+        row-gap: 5vh;
 
+        > article {
+            width: 90%;
+            @include displayColumn(1vh);
+            align-items: center;
+            text-align: center;
+        }
+
+        h5 {
+            color: $mainColor;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        h2 {
+            font-size: 30px;
+            font-weight: 600;
+            width: 80%;
+            font-weight: 600;
+        }
+
+        > section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            row-gap: 10vh;
+        }
+
+        figure{
+            width: 90%;
+            background-color: gainsboro;
+            // display: flex;
+            // @include displayColumn(3vh);
+            // align-items: center;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        figcaption {
+            @include displayColumn(2vh);
+            padding: 8%;
+        }
+
+        ul {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        li {
+            display: flex;
+            align-items: center;
+            column-gap: 2vh;
+
+            p {
+                width: 50%;
+            }
+
+            i {
+                color: $mainColor;
+            }
+        }
+
+        h4 {
+            font-size: 22px;
+        }
+
+        a {
+            @include displayRow (1vh);
+            color: $mainColor;
+            border-bottom: 1px solid $mainColor;
+            width: 20vh;
+        }
+    }
     
     // footer
     footer {
