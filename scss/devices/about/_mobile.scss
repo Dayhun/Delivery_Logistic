@@ -1,13 +1,4 @@
 @media (min-width: $mobileVersion) {
-    %title {
-        @include displayColumn(2vh);
-
-        > h3 {
-            font-size: 25px;
-            font-weight: 800;
-        }
-    }
-
     // NAV
     nav {
         position: relative;
@@ -259,7 +250,12 @@
 
     // CATEGORIES
     .categories {
-        @extend %title;
+        @include displayColumn(2vh);
+
+        > h3 {
+            font-size: 25px;
+            font-weight: 800;
+        }
 
         > ul {
             background-color: #f2f2f4;
@@ -292,7 +288,12 @@
 
     // RECENT POST
     .post {
-        @extend %title;
+        @include displayColumn(2vh);
+
+        > h3 {
+            font-size: 25px;
+            font-weight: 800;
+        }
 
         > aside {
             @include displayColumn(1vh);
@@ -317,7 +318,12 @@
 
     // TAG CLOUD
     .tag {
-        @extend %title;
+        @include displayColumn(2vh);
+
+        > h3 {
+            font-size: 25px;
+            font-weight: 800;
+        }
 
         > aside {
             @include displayRow(2vw);
@@ -333,7 +339,12 @@
 
     // PLAIN TEXT
     .plain {
-        @extend %title;
+        @include displayColumn(2vh);
+
+        > h3 {
+            font-size: 25px;
+            font-weight: 800;
+        }
 
         > aside {
             @include displayColumn(2vh);
