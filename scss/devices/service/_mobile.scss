@@ -1,5 +1,468 @@
 @media (min-width: $mobileVersion) {
-    html {
-        background-color: orange;
+
+    // nav
+    nav {
+        position: relative;
+       
+        > article {
+            background-color: $footerColor;
+
+            span {
+                display: flex;
+                align-items: center;
+                column-gap: 2vh;
+                color: white;
+            }
+    
+            i,
+            a {
+                color: white;
+                font-size: 14px;
+            }
+            
+            ul {
+                display: flex;
+                width: 50%;
+            }
+    
+            li {
+                display: flex;
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        > section {
+            width: 92%;
+            padding: 0vh 4%;
+            min-height: 8vh;
+            background-color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            h2 {
+                // width: 80%;
+                display: flex;
+                column-gap: 2vh;
+                color: $mainColor;
+            }
+
+            > ul,
+            > a {
+            display: none;
+            }
+        }
+
+        aside {
+            min-height: 14vh;
+            align-items: center;
+            justify-content: center;
+            row-gap: 2vh;
+        }
+
+        
+    }
+
+    details {
+        width: 92%;
+        position: absolute;
+        text-align: right;
+
+        ul {
+            position: absolute;
+            width: 100%;
+            padding-top: 1vh;
+        }
+
+        li {
+            display: flex;
+            width: 100%;
+            background-color: white;
+        }
+
+        a {
+            width: 100%;
+            padding: 2vh;
+            text-align: left;
+            color: $footerColor;
+            font-weight: 600;
+
+        }
+
+    }
+
+    summary {
+        color: gray;
+        border: 1px solid gainsboro;
+        padding: 1vh 2vh;
+        font-size: 17px;
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+        // height: 5vh;
+        // width: 5vh;
+    }
+
+    // header
+    header {
+        background-image: url(/img/bg-header.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 40vh;
+    }
+
+    /* main */
+     main {
+        text-align: center;
+        padding-top: 10vh;
+        padding-bottom: 10vh;
+    }
+
+    .services, .quote, .pricing {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 10vh;
+    }
+
+    main {
+        blockquote {
+            > h2 {
+                color: $footerColor;
+                width: 100%;
+                font-size: 22px;
+                font-weight: 900;
+            } 
+    
+            > h4 {
+                color: $mainColor;
+                font-size: 18px;
+                text-transform: uppercase;
+                font-weight: 900;
+            }
+        
+        }
+    }
+
+    /* services */
+    .services {
+        > article {
+            align-items: center;
+            row-gap: 5vh;
+
+
+            /* colocar o mixin aqui depois */
+            aside {
+                @include displayColumn(5vh);
+                /* display: flex;
+                flex-direction: column; */
+                width: 80%;
+/*                 row-gap: 5vh;
+ */                text-align: center;
+            }
+        }
+    }
+
+
+    .services {
+        aside {
+            > section {
+                background-color: $mainColor;
+                height: 12vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                column-gap: 5vh;
+            }
+        }
+    }
+    
+
+    .services strong {
+        color: whitesmoke;
+    }
+
+    .services p,
+    .quote p  {
+        color: gray;
+        
+    }
+
+    .services a {
+        color: $mainColor;
+        padding: 5%;
+        text-decoration: underline lightgray;
+    } 
+
+    /* quote */
+    .quote {
+        background-color: whitesmoke;
+
+        > section {
+            width: 100%;
+            height: 50vh;
+            background-color: $mainColor;
+        }
+
+        blockquote {
+            padding: 5vh;
+        }
+
+        p {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-left: 15vh;
+            padding-right: 15vh;
+            text-align: left;
+        }
+    
+    }
+
+    .quote {
+        section {
+            display: flex;
+            flex-direction: column;
+            row-gap: 5vh;
+            align-items: flex-start;
+            padding-left: 15vh;
+            padding-right: 15vh;
+            text-align: left;
+
+            h3 {
+                color: $mainColor;
+                font-size: 22px;
+                font-weight: 900;
+            }
+
+            small {
+                font-weight: 600;
+                color: $footerColor;
+            }
+        }
+
+    }
+
+    .quote small {
+        color: $footerColor;
+        font-weight: 800;
+    }
+
+    .quote form {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        input {
+            padding: 2%;
+        }
+    
+    }
+
+    .quote > section > [type="submit"] {
+        color: white;
+        background-color: $footerColor;
+    }
+
+    .quote > section > aside {
+        background-color: gainsboro;
+    } 
+
+    /* pricing */
+    .pricing small,
+    .pricing ul  {
+        padding: 5vh;
+
+
+        > li {
+            color: gray;
+            height: 10vh;
+            text-align: center;
+            justify-content: center;
+        }
+    }
+    
+    .pricing {
+
+        article {
+            display: flex;
+            align-items: center;
+            row-gap: 10vh;
+        }
+
+        aside {
+            display: flex;
+            flex-direction: column;
+            /* row-gap: 5vh;*/
+            background-color: whitesmoke;
+
+            > section { 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                height: 10vh;
+            }
+        }
+
+    }
+
+    .pricing {
+        h3 {
+            color: $footerColor;
+            font-weight: 800;
+            font-size: 23px;
+    
+        }
+
+        small {
+            color: gray;
+
+        }
+    }
+
+    .pricing > article blockquote {
+        background-color: $mainColor;
+        width: 100%;
+    }
+
+    .pricing {
+        aside {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+    
+            > a {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background-color: #fe4802;
+                color: white;
+                width: 30vh;
+                height: 15vh;
+            } 
+        }
+    }
+    
+    
+
+
+
+    // footer
+    footer {
+        background-color: $footerColor;
+
+        > article {
+            min-height: 150vh;
+            justify-content: center;
+            align-items: center;
+            row-gap: 5vh;
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                row-gap: 3vh;
+            }
+
+            ol {
+                display: flex;
+                width: 50%;
+            }
+
+            li {
+                width: 100%;
+                column-gap: 2vh;
+                align-items: center;
+            }
+        }
+
+        > section {
+            border-top: 1px solid dimgray;
+            min-height: 20vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            row-gap: 2vh;
+
+            p {
+                width: 90%;
+                color: white;
+            }
+
+            ul {
+                display: flex;
+                width: 80%;
+            }
+
+            li {
+                display: flex;
+                justify-content: center;
+                width: 100%;
+            }
+
+        }
+
+        span {
+            color: $mainColor;
+        }
+
+        aside {
+            width: 90%;
+            row-gap: 4vh;
+        }
+
+        a {
+            color: white;
+        }
+
+        address,
+        i,
+        p {
+            color: white;
+        }
+
+        h3 {
+            color: $mainColor;
+            font-size: 22px;
+        }
+
+        form {
+            display: flex;
+            width: 100%;
+        }
+
+        input {
+            border: none;
+            padding: 3vh;
+            width: 70%;
+        }
+
+        [type="submit"] {
+            width: 30%;
+            background-color: $mainColor;
+            color: white;
+            transition: .4s;
+            border: none;
+            border: 1px solid $mainColor;
+        }
+
+    }
+    
+    ol  [href="#"] {
+        border: 1px solid white;
+        border-radius: 50%;
+        height: 6vh;
+        width: 6vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
+
+    
