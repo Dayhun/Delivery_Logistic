@@ -4,7 +4,7 @@
         display: none;
     }
 
-    nav {
+    .about-nav {
         aside {
             min-height: 5vh;
             padding: 0 4%;
@@ -75,7 +75,7 @@
     }
 
     // HEADER
-    header {
+    .about-header {
         height: 40vh;
 
         aside {
@@ -281,7 +281,7 @@
     }
 
     // FOOTER
-    footer > article {
+    .about-footer > article {
         padding: 8vh 4%;
 
         > aside {
@@ -317,7 +317,7 @@
         }
     }
 
-    footer > section {
+    .about-footer > section {
         flex-direction: row;
         padding: 2% 4%;
 

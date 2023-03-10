@@ -1,12 +1,6 @@
 @media (min-width: $tabletVersion) {
-    %title {
-        > h3 {
-            font-size: 23px;
-            font-weight: 700;
-        }
-    }
     // NAV
-    nav {
+    .about-nav {
         > article {
             span {
                 column-gap: 1.5vw;
@@ -39,7 +33,7 @@
     }
 
     // HEADER
-    header {
+    .about-header {
         aside {
             > article {
                 column-gap: 2vw;
@@ -121,7 +115,10 @@
 
     // CATEGORIES
     .categories {
-        @extend %title;
+        > h3 {
+            font-size: 23px;
+            font-weight: 700;
+        }
 
         > ul {
             padding: 5%;
@@ -143,7 +140,10 @@
 
     // RECENT POST
     .post {
-        @extend %title;
+        > h3 {
+            font-size: 23px;
+            font-weight: 700;
+        }
 
         > aside {
             img {
@@ -155,7 +155,10 @@
 
     // TAG CLOUD
     .tag {
-        @extend %title;
+        > h3 {
+            font-size: 23px;
+            font-weight: 700;
+        }
 
         > aside {
             column-gap: 1vw;
@@ -168,7 +171,10 @@
 
     // PLAIN TEXT
     .plain {
-        @extend %title;
+        > h3 {
+            font-size: 23px;
+            font-weight: 700;
+        }
 
         > aside {
             padding: 5%;
@@ -243,7 +249,7 @@
     }
 
     // FOOTER
-    footer > article {
+    .about-footer > article {
         flex-direction: row;
         column-gap: 4vw;
         align-items: flex-start;
@@ -317,7 +323,7 @@
         }
     }
 
-    footer > section {
+    .about-footer > section {
         padding: 3% 5%;
         align-items: flex-end;
         row-gap: 1vh;
