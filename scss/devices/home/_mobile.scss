@@ -105,7 +105,7 @@
 
     summary {
         color: gray;
-        border: 1px solid gainsboro;
+        border: 1px solid #f2f2f4;
         padding: 1vh 2vh;
         font-size: 17px;
         // display: flex;
@@ -250,7 +250,7 @@
 
     // services
     .services {
-        background-color: gainsboro;
+        background-color: #f2f2f4;
         align-items: center;
         padding-bottom: 5vh;
 
@@ -300,7 +300,7 @@
             height: 1vh;
             border-radius: 50%;
             background-color: $mainColor;
-            border: 3px solid gainsboro;
+            border: 3px solid #f2f2f4;
             outline: 2px solid $mainColor
         }
 
@@ -353,7 +353,7 @@
 
         figure {
             width: 90%;
-            background-color: gainsboro;
+            background-color: #f2f2f4;
             border-bottom: 5px solid $mainColor;
             display: flex;
             flex-direction: column;
@@ -411,7 +411,7 @@
 
         figure{
             width: 90%;
-            background-color: gainsboro;
+            background-color: #f2f2f4;
             // display: flex;
             // @include displayColumn(3vh);
             // align-items: center;
