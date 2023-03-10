@@ -3,22 +3,17 @@
         0% {
             transform: scale(0.9);
             box-shadow: 0 0 0 px rgb(255, 171, 138, 1);
-
         }
 
         70% {
             transform: scale(1);
             box-shadow: 0 0 0 10px rgb(255, 171, 138, .2);
-
         }
 
         100% {
             transform: scale(0.9);
             box-shadow: 0 0 0 15px rgb(255, 171, 138, 0);
-
-            
         }
-
     }
 
     // nav
