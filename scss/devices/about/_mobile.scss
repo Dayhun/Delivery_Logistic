@@ -1,14 +1,15 @@
 @media (min-width: $mobileVersion) {
     // NAV
-    .about-nav {
+    nav {
         position: relative;
 
         > article {
             background-color: $footerColor;
 
             span {
-                @include displayRow(2vw);
+                display: flex;
                 align-items: center;
+                column-gap: 2vh;
                 color: white;
             }
 
@@ -19,31 +20,31 @@
             }
 
             ul {
-                @include displayRow;
-                width: 40%;
+                display: flex;
+                width: 50%;
             }
 
             li {
-                @include displayRow;
+                display: flex;
                 width: 100%;
                 justify-content: center;
             }
         }
 
         > section {
-            padding: 0 4%;
-            height: 8vh;
+            width: 92%;
+            padding: 0vh 4%;
+            min-height: 8vh;
             background-color: white;
-            @include displayRow;
+            display: flex;
             justify-content: space-between;
             align-items: center;
 
             h2 {
-                @include displayRow(2vh);
-                align-items: center;
+                // width: 80%;
+                display: flex;
+                column-gap: 2vh;
                 color: $mainColor;
-                font-size: 30px;
-                font-weight: 700;
             }
 
             > ul,
@@ -53,7 +54,7 @@
         }
 
         aside {
-            min-height: 12vh;
+            min-height: 14vh;
             align-items: center;
             justify-content: center;
             row-gap: 2vh;
@@ -448,62 +449,42 @@
     }
 
     // FOOTER
-    .about-footer {
+    footer {
         background-color: $footerColor;
 
         > article {
-            padding: 15vh 0;
+            min-height: 150vh;
             justify-content: center;
             align-items: center;
-            row-gap: 7vh;
+            row-gap: 5vh;
 
             ul {
-                width: 100%;
-                @include displayColumn(2vh);
+                display: flex;
+                flex-direction: column;
+                row-gap: 3vh;
             }
 
             ol {
-                @include displayRow(2vw);
-                width: fit-content;
-            }
-
-            ol [href="#"] {
-                border: 1px solid white;
-                border-radius: 50%;
-                height: 5vh;
-                width: 5vh;
-                @include displayRow;
-                justify-content: center;
-                align-items: center;
+                display: flex;
+                width: 50%;
             }
 
             li {
                 width: 100%;
-                @include displayRow(1vh);
+                column-gap: 2vh;
                 align-items: center;
-            }
-
-            ::placeholder {
-                font-size: 15px;
-                color: gray;
-                padding-left: 8%;
-            }
-
-            > aside:nth-child(2) {
-                a {
-                    @include displayRow(2vw);
-                    align-items: center;
-                }
             }
         }
 
         > section {
-            padding: 10% 4%;
             border-top: 1px solid dimgray;
-            @include displayColumn(2vh);
+            min-height: 20vh;
+            display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
+            row-gap: 2vh;
 
             p {
                 width: 90%;
@@ -511,12 +492,12 @@
             }
 
             ul {
-                @include displayRow;
+                display: flex;
                 width: 80%;
             }
 
             li {
-                @include displayRow;
+                display: flex;
                 justify-content: center;
                 width: 100%;
             }
@@ -528,7 +509,7 @@
 
         aside {
             width: 90%;
-            row-gap: 3vh;
+            row-gap: 4vh;
         }
 
         a {
@@ -543,28 +524,37 @@
 
         h3 {
             color: $mainColor;
-            font-size: 25px;
+            font-size: 22px;
         }
 
         form {
-            @include displayRow;
+            display: flex;
             width: 100%;
         }
 
         input {
             border: none;
-            padding: 2vh;
+            padding: 3vh;
             width: 70%;
-            color: $mainColor;
         }
 
         [type="submit"] {
-            font-size: 15px;
             width: 30%;
             background-color: $mainColor;
             color: white;
             transition: 0.4s;
-            border: 1px solid $mainColor;
+            border: none;
+            border: 3px solid $mainColor;
         }
+    }
+
+    ol [href="#"] {
+        border: 1px solid white;
+        border-radius: 50%;
+        height: 6vh;
+        width: 6vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
