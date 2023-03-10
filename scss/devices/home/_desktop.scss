@@ -21,46 +21,51 @@
 
         > section {
 
-            > a {
-                display: block;
-                border: 3px solid $mainColor;
-                background-color: $mainColor;
-                color: white;
-                padding: 1vh 2vh;
-
-                &:hover {
-                    background-color: $footerColor;
-                    color: $mainColor;
-                }
-            } 
+            
 
             > ul {
                 display: flex;
                 width: 25%;
                 height: 12vh;
                 
-                li {
-                    display: flex;
-                    width: 100%;
-                    height: 100%;
-        
-                    
-                }
+            }
 
-                a {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    width: 100%;
-                    height: 100%;
-                    color: $footerColor;
+            li {
+                display: flex;
+                width: 100%;
+                height: 100%;
     
-                    &:hover {
-                        background-color: $mainColor;
-                        color: white;
-                    }
+                
+            }
+
+            a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 100%;
+                color: $footerColor;
+
+                &:hover {
+                    background-color: $mainColor;
+                    color: white;
                 }
             }
+
+            > a {
+                display: block;
+                border: 3px solid $mainColor;
+                background-color: $mainColor;
+                color: white;
+                padding: 1vh 2vh;
+                width: 20vh;
+                text-align: center;
+
+                &:hover {
+                    background-color: $footerColor;
+                    color: $mainColor;
+                }
+            } 
         }
 
         details {
