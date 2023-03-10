@@ -1,5 +1,20 @@
 @media (min-width: $mobileVersion) {
 
+    * {
+        font-family: $fontFamily;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    // private classes
+    %flexColumn {
+        display: flex;
+        flex-direction: column;
+        /* border: 2px solid black; */
+    }
+
     // nav
     nav {
         position: relative;
@@ -110,211 +125,258 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        min-height: 40vh;
-    }
+        height: 35vh;
 
-    /* main */
-     main {
-        text-align: center;
-        padding-top: 10vh;
-        padding-bottom: 10vh;
-    }
-
-    .services, .quote, .pricing {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        row-gap: 10vh;
-    }
-
-    main {
-        blockquote {
-            > h2 {
-                color: $footerColor;
-                width: 100%;
-                font-size: 22px;
-                font-weight: 900;
-            } 
-    
-            > h4 {
-                color: $mainColor;
-                font-size: 18px;
-                text-transform: uppercase;
-                font-weight: 900;
-            }
-        
-        }
-    }
-
-    /* services */
-    .services {
         > article {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(40, 40, 40, 0.9);
+            @include displayColumn(5vh);
+            justify-content: center;
             align-items: center;
-            row-gap: 5vh;
+        }
 
+        aside {
+            @include displayColumn(2vh);
+            text-align: center;
+            align-items: center;
 
-            /* colocar o mixin aqui depois */
-            aside {
-                @include displayColumn(5vh);
-                /* display: flex;
-                flex-direction: column; */
-                width: 80%;
-/*                 row-gap: 5vh;
- */                text-align: center;
+            > h1 {
+                font-size: 45px;
+                color: white;
+                font-weight: 700;
+            }
+
+            > article {
+                @include displayRow(4vw);
+                align-items: center;
+            }
+
+            span {
+                width: 4vw;
+                height: 4vw;
+                background-color: white;
+                border-radius: 50%;
+            }
+
+            a {
+                color: white;
             }
         }
     }
 
+    // all sections
+    .services, 
+    .quote, 
+    .pricing {
+        align-items: center;
+        row-gap: 2vh;
+        padding: 5%;
 
+        > blockquote {
+            padding: 5%;
+        }
+
+        h2 {
+            color: $footerColor;
+            width: 100%;
+            font-size: 20px;
+            font-weight: 800;
+            text-align: center;
+
+        }
+
+        h4 {
+            color: $mainColor;
+            font-size: 18px;
+            text-transform: uppercase;
+            font-weight: 700;
+            text-align: center;
+        }
+    }
+
+    // services section
     .services {
         aside {
+            @include displayColumn (3vh);
+            padding-bottom: 5%;
             > section {
                 background-color: $mainColor;
                 height: 12vh;
-                display: flex;
                 align-items: center;
                 justify-content: center;
-                column-gap: 5vh;
+                @include displayRow (5vh);
             }
         }
+
+        strong {
+            color: whitesmoke;
+        }
+
+        p  {
+            text-align: center;
+            color: gray;
+        }
+
+        a {
+            color: $mainColor;
+            display: flex;
+            justify-content: center;
+            text-decoration: underline lightgray;
+            transition: .6;
+
+
+            &:hover {
+                font-weight: 600;
+                font-size: 20px;
+                text-decoration: underline $mainColor;
+            }
+        } 
+
     }
-    
 
-    .services strong {
-        color: whitesmoke;
-    }
-
-    .services p,
-    .quote p  {
-        color: gray;
-        
-    }
-
-    .services a {
-        color: $mainColor;
-        padding: 5%;
-        text-decoration: underline lightgray;
-    } 
-
-    /* quote */
+    // quote section
     .quote {
+        
         background-color: whitesmoke;
 
-        > section {
-            width: 100%;
-            height: 50vh;
-            background-color: $mainColor;
-        }
-
-        blockquote {
-            padding: 5vh;
-        }
-
-        p {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding-left: 15vh;
-            padding-right: 15vh;
-            text-align: left;
-        }
-    
-    }
-
-    .quote {
+        blockquote,
+        p,
         section {
-            display: flex;
-            flex-direction: column;
-            row-gap: 5vh;
-            align-items: flex-start;
-            padding-left: 15vh;
-            padding-right: 15vh;
+            padding: 1.5%;
+        }
+
+        h2, 
+        h4 {
             text-align: left;
-
-            h3 {
-                color: $mainColor;
-                font-size: 22px;
-                font-weight: 900;
-            }
-
-            small {
-                font-weight: 600;
-                color: $footerColor;
-            }
-        }
-
-    }
-
-    .quote small {
-        color: $footerColor;
-        font-weight: 800;
-    }
-
-    .quote form {
-        width: 50%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        input {
-            padding: 2%;
-        }
-    
-    }
-
-    .quote > section > [type="submit"] {
-        color: white;
-        background-color: $footerColor;
-    }
-
-    .quote > section > aside {
-        background-color: gainsboro;
-    } 
-
-    /* pricing */
-    .pricing small,
-    .pricing ul  {
-        padding: 5vh;
-
-
-        > li {
-            color: gray;
-            height: 10vh;
-            text-align: center;
-            justify-content: center;
-        }
-    }
-    
-    .pricing {
-
-        article {
-            display: flex;
-            align-items: center;
-            row-gap: 10vh;
         }
 
         aside {
+            > h3 {
+               color: $mainColor;
+               font-size: 23px; 
+               padding-top: 5%;
+            }
+
+            > small {
+                color: $footerColor;
+                font-weight: 700;
+                padding-bottom: 2%;
+
+            }
+        }
+
+        > section {
+            @extend %flexColumn;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            background-color: $mainColor;
+        }
+
+        form {
+            padding: 10%;
+            width: 70%;
+            @extend %flexColumn;
+            @include displayColumn (3vh);
+            justify-content: center;
+            align-items: center;
+
+            input {
+                height: 7vh;
+                width: 100%;
+                border: none transparent;
+                color: gray;
+
+                &::placeholder {
+                    padding: 1%;
+                }
+            }
+
+            select {
+                height: 7vh;
+                width: 100%;
+                border: none transparent;
+                color: gray;
+                appearance: none;
+                background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat white right 0.75rem center/8px 10px;
+                padding: 1%;
+            }
+
+
+            [type="submit"] {
+                background-color: $footerColor;
+                border: none transparent;
+                color: whitesmoke;
+                font-size: 14px;
+                height: 5vh;
+                width: 100%;
+
+                &:hover {
+                    transition: .6;
+                    background-color: transparent;
+                    border: 2px solid whitesmoke;
+                    color: whitesmoke;
+                    /* border: 3px solid $footerColor;
+                    color: $footerColor; */
+                    font-weight: 600;
+                }
+            }
+
+        }
+    }
+
+    // pricing section
+    .pricing {
+        > article {
+            @include displayColumn (5vh);
+        }
+
+        aside {
+            background-color: whitesmoke;
             display: flex;
             flex-direction: column;
-            /* row-gap: 5vh;*/
-            background-color: whitesmoke;
+            align-items: center;
+            padding-bottom: 5%;
 
             > section { 
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 text-align: center;
-                height: 10vh;
+                height: 15vh;
             }
         }
 
-    }
 
-    .pricing {
+        aside {
+            blockquote {
+                width: 100%;
+                background-color: $mainColor;
+                height: 15vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+    
+            }
+        }
+
+        aside {
+            article {
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+                row-gap: 5vh;
+                justify-content: center;
+            }
+        }
+
         h3 {
             color: $footerColor;
             font-weight: 800;
             font-size: 23px;
+            text-align: center;
     
         }
 
@@ -322,34 +384,39 @@
             color: gray;
 
         }
-    }
 
-    .pricing > article blockquote {
-        background-color: $mainColor;
-        width: 100%;
-    }
-
-    .pricing {
-        aside {
+        a {
             display: flex;
             flex-direction: column;
             align-items: center;
-    
-            > a {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                background-color: #fe4802;
-                color: white;
-                width: 30vh;
-                height: 15vh;
-            } 
+            justify-content: center;
+            background-color: #fe4802;
+            color: white;
+            width: 25vh;
+            height: 10vh;  
+            
+            &:hover {
+                transition: .6;
+                background-color: $footerColor;
+                color: white; 
+                font-weight: 800;
+                font-weight: 600;
+            }
         }
-    }
-    
-    
 
+        ul {
+            padding: 5vh;
+
+            > li {  
+                color: gray;
+                height: 10vh;
+                text-align: center;
+                justify-content: center;
+            }
+        }
+
+
+    }
 
 
     // footer
