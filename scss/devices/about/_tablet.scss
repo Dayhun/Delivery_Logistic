@@ -1,4 +1,10 @@
 @media (min-width: $tabletVersion) {
+    %title {
+        > h3 {
+            font-size: 23px;
+            font-weight: 700;
+        }
+    }
     // NAV
     nav {
         > article {
@@ -63,6 +69,7 @@
             aside {
                 column-gap: 1vw;
             }
+
             img {
                 width: 5vw;
                 height: 5vw;
@@ -72,7 +79,6 @@
         a {
             @include displayRow(1vw);
             align-items: center;
-            transition: 0.4s;
         }
 
         a:hover {
@@ -115,10 +121,7 @@
 
     // CATEGORIES
     .categories {
-        > h3 {
-            font-size: 23px;
-            font-weight: 700;
-        }
+        @extend %title;
 
         > ul {
             padding: 5%;
@@ -140,10 +143,7 @@
 
     // RECENT POST
     .post {
-        > h3 {
-            font-size: 23px;
-            font-weight: 700;
-        }
+        @extend %title;
 
         > aside {
             img {
@@ -155,10 +155,7 @@
 
     // TAG CLOUD
     .tag {
-        > h3 {
-            font-size: 23px;
-            font-weight: 700;
-        }
+        @extend %title;
 
         > aside {
             column-gap: 1vw;
@@ -171,10 +168,7 @@
 
     // PLAIN TEXT
     .plain {
-        > h3 {
-            font-size: 23px;
-            font-weight: 800;
-        }
+        @extend %title;
 
         > aside {
             padding: 5%;
